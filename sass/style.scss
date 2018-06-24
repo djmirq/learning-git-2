@@ -1,6 +1,6 @@
 
 $color1: purple;
-$color2: yellow;
+$color2: green;
 
 
 h1{
@@ -9,4 +9,10 @@ h1{
 
 h2{
     color: $color2
+}
+
+
+.test {
+	display: flex;
+	flex-wrap: wrap;
 }
