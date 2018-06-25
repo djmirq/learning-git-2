@@ -10,13 +10,13 @@
       "init:files":"touch README.md index.html sass/style.scss js/script.js",
       "init:gitignore":"curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
       "comment":"-------------------------------------------------- watch and build----------------------------------------------",
-      "compilator":"run-p watch:* ",
+      "watch":"run-p watch:* ",
       "watch:browser":"browser-sync start --server --files 'css/*.css, *.html'",
-      "watch:sass":"onchange sass/*.scss -- run-s compile:*",
-      "compile:clean":"rm -rf css/*.*",
-      "compile:css":"node-sass --output-style compact --source-map true -o css sass",
-      "compile:autoprefixer":"autoprefixer-cli css/style.css",
-      "compile:html-test":"globstar nu-html-checker *.html"
+      "watch:sass":"onchange sass/*.scss -- run-s watch2:*",
+      "watch2:clean":"rm -rf css/*.*",
+      "watch2:css":"node-sass --output-style compact --source-map true -o css sass",
+      "watch2:autoprefixer":"autoprefixer-cli css/style.css",
+      "watch2:html-test":"globstar nu-html-checker *.html"
    },
    "repository":{  
       "type":"git",
