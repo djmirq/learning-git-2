@@ -12,11 +12,11 @@
       "comment":"-------------------------------------------------- watch and build----------------------------------------------",
       "watch":"run-p watch:* ",
       "watch:browser":"browser-sync start --server --files 'css/*.css, *.html'",
-      "watch:sass":"onchange sass/*.scss -- run-s watch2:*",
-      "watch2:clean":"rm -rf css/*.*",
-      "watch2:css":"node-sass --output-style compact --source-map true -o css sass",
-      "watch2:autoprefixer":"autoprefixer-cli css/style.css",
-      "watch2:html-test":"globstar nu-html-checker *.html"
+      "watch:sass":"onchange sass/*.scss -- run-s build:*",
+      "build:clean":"rm -rf css/*.*",
+      "build:css":"node-sass --output-style compact --source-map true -o css sass",
+      "build:autoprefixer":"autoprefixer-cli css/style.css",
+      "build:html-test":"globstar nu-html-checker *.html"
    },
    "repository":{  
       "type":"git",
